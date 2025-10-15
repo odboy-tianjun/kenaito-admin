@@ -25,9 +25,9 @@ type Config struct {
 // LoadConfig 从指定路径加载配置文件
 func LoadConfig(path string) *Config {
 	// 设置配置文件名称和路径
-	viper.SetConfigName("config") // 配置文件名称（无扩展名）
-	viper.SetConfigType("yaml")   // 配置文件类型
-	viper.AddConfigPath(path)     // 查找配置文件的路径
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(path)
 
 	// 读取配置文件
 	if err := viper.ReadInConfig(); err != nil {
